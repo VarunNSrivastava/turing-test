@@ -43,8 +43,8 @@ function App() {
     let [wasCorrect, setWasCorrect] = useState(false);
 
     // Your array of welcome messages
-    const WELCOME_MESSAGES = ["Welcome to ARE YOU SMARTER THAN A LANGUAGE MODEL",
-        "You are playing 3 robots for 10 rounds of trivia.",
+    const WELCOME_MESSAGES = ["Welcome to ARE YOU SMARTER THAN A LANGUAGE MODEL!",
+        "You are playing against 2 language models for 10 rounds of trivia.",
         "Don't worry, they're not that good."];
 
     const QUIPS = [
@@ -82,7 +82,7 @@ function App() {
             if (welcomeMessage < WELCOME_MESSAGES.length) {
                 const timer = setTimeout(() => {
                     setWelcomeMessage(welcomeMessage + 1);
-                }, 200);
+                }, 2500);
                 return () => clearTimeout(timer);
             } else {
                 setGamePhase(2);
@@ -238,7 +238,7 @@ function App() {
                                     }</h1> :
                                     gamePhase === 4 ? <h2>You
                                             were {wasCorrect ? 'correct, the answer was ' + correctAnswer : 'incorrect. The correct answer was ' + correctAnswer}.</h2> :
-                                        "Game Over! Refresh to play again."
+                                        "Game Over! You won! Refresh to play again."
                     }
                     {gamePhase === 2 && currentChoices.map((choice) => (
                         <div className="button" key={choice.id}>
@@ -319,7 +319,10 @@ function App() {
                     <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2">all-MiniLM-L6-v2</a>. <br></br>
                         Trivia taken from the <a href="https://huggingface.co/datasets/metaeval/cycic_multiplechoice">metaeval/cycic_multiplechoice</a> dataset <br></br>
                     <br></br>
+                    <a href="https://github.com/VarunNSrivastava/turing-test">Code available here.</a>
                     <br></br>
+                    <br></br>
+
                     ... trivia expands your mind. :)
 
 
