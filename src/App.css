@@ -1,0 +1,144 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.text-container {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  color: white;
+  margin-left: 20px; /* adjust as needed */
+}
+
+.app-wrapper {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  background-color: darkblue;
+  color: black;
+}
+
+.header {
+  background-color: darkblue;
+  color: white;
+  font-size: 32pt;
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  font-family: "Courier New", monospace;
+}
+.questions {
+  background-color: black;
+  font-family: "Courier New", monospace;
+  font-size: 14pt;
+  color: white;
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px; /* Adds 20px of space around the text */
+  box-sizing: border-box; /* Ensures that padding is included in the element's total width and height */
+  overflow: auto;
+}
+
+.questions h1 {
+  font-size: 24pt;
+  text-align: center; /* Centers the text horizontally */
+  position: absolute; /* Needed for vertical centering */
+  top: 50%; /* Vertical centering */
+  left: 50%; /* Horizontal centering */
+  transform: translate(-50%, -50%); /* Adjusts for the size of the element */
+  width: 100%; /* Allows text to be centered across the full width of the container */
+}
+
+
+
+.character-container {
+  background-color: lightyellow;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  top: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.character-image-container {
+  position: relative;
+  top: 50px; /* adjust as needed */
+}
+.character-image {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+}
+
+.overlay-container {
+  position: relative;
+  width: 256px;
+  height: 256px;
+}
+
+.overlay-image {
+  width: 100%;
+  height: 100%;
+}
+
+.score-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50px);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.name-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -115px);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.character-name {
+  text-align: center;
+}
+
+.button {
+  font-weight:bold;
+  background-color: black; /* Button color */
+  color: black; /* Text color */
+  cursor: pointer; /* Changes the cursor when hovering over the button */
+  text-decoration: none; /* Removes the default underline (optional) */
+  transition-duration: 0.4s; /* Time for hover transition (optional) */
+}
